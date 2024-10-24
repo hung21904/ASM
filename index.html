@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/c1.css">
+</head>
+<body>
+    <header id="header"> </header>
+    <nav id="menu"> 
+        <a href="#top">Trang chủ</a>
+        <a href="#listLoaiSP">loại sản phẩm</a>
+        <a href="#listSP">sản phẩm</a>
+        <a href="#listCuahang">cơ sở</a>
+    </nav>
+    <main> 
+        <section id="listLoaiSP">
+            <h2>Danh sách loại sản phẩm </h2>
+            <div id="data"></div>
+        </section>
+        <section id="listSP">
+            <h2> Danh sách sản phẩm </h2>
+            <div id="data"></div>
+        </section>
+        <section id="listCuahang">
+            <h2> Danh sách cơ sở</h2>
+            <div id="data"></div>
+        </section>
+        <section id="listthuonghieu">
+            <h2> Các thương hiệu</h2>
+            <div id="data"></div>
+        </section>
+    </main>
+    <footer> Appe FaKe</footer>
+</body>
+</html>
+<script type="module">
+   import { showlistLoai, showlistSP ,showlistcoso, showlistthuonghieu} from './js/app.js';
+   document.querySelector("#listLoaiSP #data").innerHTML = showlistLoai();
+   document.querySelector("#listSP #data").innerHTML = showlistSP();
+   document.querySelector("#listCuahang #data").innerHTML = showlistcoso();
+   document.querySelector("#listthuonghieu #data").innerHTML = await showlistthuonghieu();
+</script>
+
